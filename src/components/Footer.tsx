@@ -52,14 +52,14 @@ export function Footer() {
         </div>
 
         <div className="mt-20 flex items-end justify-between gap-6 md:mt-28">
-          <p className="eyebrow text-mute">© 2026 Forward Creative Inc.</p>
+          <p className="eyebrow text-mute">© 2026 Forward Theory</p>
           <BackToTop />
         </div>
       </div>
 
       {/* Giant wordmark */}
       <div className="gutter mt-6 select-none" aria-hidden="true">
-        <Wordmark className="block translate-y-[0.16em] text-center text-[clamp(4rem,18.6vw,21rem)] leading-[0.8]" />
+        <Wordmark stacked className="block translate-y-[0.12em] text-[clamp(4rem,18.6vw,21rem)] leading-[0.82]" />
       </div>
     </footer>
   );

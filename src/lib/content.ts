@@ -4,13 +4,13 @@
  */
 
 export const site = {
-  name: "Forward Creative Inc.",
-  shortName: "FORWARD.",
+  name: "Forward Theory",
+  shortName: "Forward Theory",
   tagline: "Creative that moves you forward.",
   description:
-    "Forward Creative is an independent creative studio building brands, websites, and digital experiences that turn ambitious ideas into meaningful growth.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://forwardcreative.co", // TODO: real domain
-  email: "hello@forwardcreative.co", // TODO: real inbox
+    "Forward Theory is an independent creative studio building brands, websites, and digital experiences that turn ambitious ideas into meaningful growth.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://forwardtheory.co", // TODO: real domain
+  email: "hello@forwardtheory.co", // TODO: real inbox
   social: {
     instagram: "https://www.instagram.com/", // TODO: real profile
     linkedin: "https://www.linkedin.com/", // TODO: real profile
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     status: "founder",
     art: { bg: "#111111", fg: "#F2F0EB", accent: "#D9FF43", motif: "type" },
     summary:
-      "THUMOS is an existing brand associated with Forward Creative's founder. It is shown here for context only — it is not presented as Forward Creative client work.",
+      "THUMOS is an existing brand associated with Forward Theory's founder. It is shown here for context only — it is not presented as Forward Theory client work.",
     size: "lg",
   },
   {

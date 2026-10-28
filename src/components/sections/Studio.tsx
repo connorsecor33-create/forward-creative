@@ -29,7 +29,7 @@ export function Studio() {
         <div className="flex flex-col justify-end gap-10 lg:col-span-5 lg:pb-3">
           <Reveal delay={0.1}>
             <p className="lede text-ink">
-              Forward Creative is an independent creative studio built for brands that refuse to
+              Forward Theory is an independent creative studio built for brands that refuse to
               stand still. We combine strategy, design, technology, and storytelling to create
               experiences that drive attention, build trust, and inspire action.
             </p>

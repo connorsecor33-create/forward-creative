@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     budget: allowedBudgets.has(body.budget ?? "") ? body.budget : "Not specified",
     message: body.message!.trim(),
     submittedAt: new Date().toISOString(),
-    source: "forwardcreative.co contact form",
+    source: "forwardtheory.co contact form",
   };
 
   const webhook = process.env.CONTACT_WEBHOOK_URL;

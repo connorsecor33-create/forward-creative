@@ -1,4 +1,4 @@
-# Forward Creative Inc. — Website
+# Forward Theory — Website
 
 Next.js (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Motion for React · Lucide icons
 

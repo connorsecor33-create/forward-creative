@@ -93,8 +93,8 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               <Wordmark
-                className={`block transition-[font-size] duration-500 ${
-                  compact ? "text-[1.35rem] md:text-[1.6rem]" : "text-[1.6rem] md:text-[2.1rem]"
+                className={`block whitespace-nowrap transition-[font-size] duration-500 ${
+                  compact ? "text-[1.15rem] md:text-[1.4rem]" : "text-[1.25rem] md:text-[1.75rem]"
                 }`}
                 dotClassName={dark ? "text-lime" : "text-ink"}
               />

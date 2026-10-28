@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Forward Creative Inc. — Creative that moves you forward.";
+export const alt = "Forward Theory — Creative that moves you forward.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,7 +32,7 @@ export default function OpengraphImage() {
           </span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 26 }}>
-          <span>Forward Creative Inc.</span>
+          <span>Forward Theory</span>
           <span style={{ background: "#D9FF43", color: "#111111", padding: "10px 22px", borderRadius: 999 }}>
             Creative that moves you forward ↗
           </span>

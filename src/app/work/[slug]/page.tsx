@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${p.title} (${statusLabel[p.status]})`,
     description: p.summary,
     alternates: { canonical: `/work/${p.slug}` },
-    openGraph: { title: `${p.title} — Forward Creative`, description: p.summary, url: `/work/${p.slug}` },
+    openGraph: { title: `${p.title} — Forward Theory`, description: p.summary, url: `/work/${p.slug}` },
   };
 }
 
@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }: Props) {
     concept:
       "This is a self-initiated concept, not commissioned client work. It exists to show how we approach a brief — the strategy, the system, and the craft.",
     founder:
-      "THUMOS is an existing brand associated with Forward Creative's founder. It's included for context about the people behind the studio — not as agency client work or deliverables.",
+      "THUMOS is an existing brand associated with Forward Theory's founder. It's included for context about the people behind the studio — not as agency client work or deliverables.",
     client: "",
   };
 
