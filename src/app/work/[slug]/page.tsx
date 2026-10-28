@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects, statusLabel } from "@/lib/content";
 import { ProjectArt } from "@/components/ProjectArt";
 import { Button } from "@/components/Button";
@@ -46,8 +45,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <article className="bg-paper">
       <header className="gutter pb-12 pt-32 md:pb-16 md:pt-44">
-        <Link href="/#work" className="eyebrow group mb-12 inline-flex items-center gap-2 text-mute-dark hover:text-ink">
-          <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" aria-hidden="true" />
+        <Link href="/#work" className="eyebrow mb-12 inline-block border-b border-transparent text-mute-dark hover:border-ink hover:text-ink">
           All work
         </Link>
         <p className="eyebrow mb-6">
@@ -96,15 +94,12 @@ export default async function ProjectPage({ params }: Props) {
 
       <Link
         href={`/work/${next.slug}`}
-        className="on-dark group gutter flex items-end justify-between gap-6 bg-ink py-16 text-paper md:py-24"
+        className="on-dark group gutter block bg-ink py-16 text-paper md:py-24"
       >
         <div>
           <p className="eyebrow mb-4 text-mute">Next project</p>
           <p className="display-xl transition-colors duration-500 group-hover:text-lime">{next.title}</p>
         </div>
-        <span className="mb-2 grid size-16 shrink-0 place-items-center rounded-full bg-lime text-ink transition-transform duration-700 group-hover:rotate-45 md:size-24">
-          <ArrowUpRight className="size-7 md:size-9" aria-hidden="true" />
-        </span>
       </Link>
     </article>
   );

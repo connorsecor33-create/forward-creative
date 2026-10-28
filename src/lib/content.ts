@@ -109,7 +109,7 @@ export type Project = {
   /** Optional photo/render in /public. Falls back to a generated art panel. */
   image?: string;
   /** Visual theme for the generated art panel. */
-  art: { bg: string; fg: string; accent: string; motif: "arrow" | "grid" | "stack" | "orbit" | "type" };
+  art: { bg: string; fg: string; accent: string; motif: "bars" | "grid" | "stack" | "orbit" | "type" };
   summary: string;
   /** Layout hint for the asymmetric grid. */
   size: "lg" | "md" | "sm";
@@ -135,9 +135,9 @@ export const projects: Project[] = [
     services: ["Identity", "E-commerce", "Art direction"],
     year: "2026",
     status: "concept",
-    art: { bg: "#D9FF43", fg: "#111111", accent: "#111111", motif: "arrow" },
+    art: { bg: "#D9FF43", fg: "#111111", accent: "#111111", motif: "bars" },
     summary:
-      "A self-initiated concept exploring how a direct-to-consumer outdoor label could use a single directional mark across product, packaging, and storefront.",
+      "A self-initiated concept exploring how a direct-to-consumer outdoor label could use a single bold mark across product, packaging, and storefront.",
     size: "md",
   },
   {

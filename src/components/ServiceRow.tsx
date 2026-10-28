@@ -2,7 +2,7 @@
 
 import { useId } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import type { Service } from "@/lib/content";
 import { EASE_OUT_EXPO } from "@/lib/motion";
 
@@ -56,7 +56,7 @@ export function ServiceRow({ service, open, onToggle }: ServiceRowProps) {
             }`}
             aria-hidden="true"
           >
-            {open ? <Plus className="size-5" /> : <ArrowUpRight className="size-5 transition-transform duration-500 group-hover/row:rotate-45" />}
+            <Plus className="size-5" />
           </span>
         </button>
       </h3>
@@ -88,7 +88,7 @@ export function ServiceRow({ service, open, onToggle }: ServiceRowProps) {
                   href="#contact"
                   className="eyebrow inline-flex w-fit items-center gap-2 border-b border-ink pb-1"
                 >
-                  Discuss this service <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                  Discuss this service
                 </a>
               </div>
             </div>

@@ -1,7 +1,5 @@
 "use client";
 
-import { ArrowUp } from "lucide-react";
-
 export function BackToTop() {
   return (
     <button
@@ -14,7 +12,6 @@ export function BackToTop() {
       className="eyebrow group inline-flex items-center gap-2 text-paper/70 hover:text-lime"
     >
       Back to top
-      <ArrowUp className="size-4 transition-transform duration-500 group-hover:-translate-y-1" aria-hidden="true" />
     </button>
   );
 }

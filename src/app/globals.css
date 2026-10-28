@@ -251,13 +251,11 @@ html:not(.no-intro) .hero-anim {
   animation: chevron-pulse 2.4s var(--ease-in-out-quart) infinite;
 }
 .momentum-disc circle {
-  fill: var(--color-ink);
+  fill: var(--color-lime);
+  stroke: var(--color-ink);
+  stroke-width: 6;
   transform-origin: 252px 60px;
   animation: disc-beat 2.4s var(--ease-in-out-quart) infinite;
-}
-.momentum-arrow {
-  stroke: var(--color-lime);
-  animation: arrow-nudge 2.4s var(--ease-in-out-quart) infinite;
 }
 @keyframes chevron-pulse {
   0%,
@@ -281,16 +279,6 @@ html:not(.no-intro) .hero-anim {
   }
   70% {
     transform: scale(1.08);
-  }
-}
-@keyframes arrow-nudge {
-  0%,
-  55%,
-  100% {
-    transform: translate(0, 0);
-  }
-  70% {
-    transform: translate(5px, -5px);
   }
 }
 @media (prefers-reduced-motion: reduce) {

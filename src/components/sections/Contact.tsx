@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { site } from "@/lib/content";
 import { Reveal, RevealLines } from "../Reveal";
 import { ContactForm } from "../ContactForm";
@@ -35,7 +34,6 @@ export function Contact() {
                 className="group mt-10 inline-flex items-center gap-3 border-b border-paper/30 pb-2 text-lg transition-colors hover:border-lime hover:text-lime md:text-xl"
               >
                 {site.email}
-                <ArrowUpRight className="size-5 transition-transform duration-500 group-hover:rotate-45" aria-hidden="true" />
               </a>
             </Reveal>
           </div>

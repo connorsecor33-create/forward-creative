@@ -34,7 +34,7 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 26 }}>
           <span>Forward Theory</span>
           <span style={{ background: "#D9FF43", color: "#111111", padding: "10px 22px", borderRadius: 999 }}>
-            Creative that moves you forward ↗
+            Creative that moves you forward
           </span>
         </div>
       </div>

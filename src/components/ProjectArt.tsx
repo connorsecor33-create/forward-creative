@@ -14,7 +14,7 @@ export function ProjectArt({ project, className = "" }: { project: Project; clas
       aria-hidden="true"
     >
       {motif === "type" && <TypeMotif title={project.title} accent={accent} />}
-      {motif === "arrow" && <ArrowMotif accent={accent} />}
+      {motif === "bars" && <BarsMotif accent={accent} />}
       {motif === "grid" && <GridMotif accent={accent} fg={fg} />}
       {motif === "stack" && <StackMotif title={project.title} accent={accent} />}
       {motif === "orbit" && <OrbitMotif accent={accent} />}
@@ -48,19 +48,21 @@ function TypeMotif({ title, accent }: { title: string; accent: string }) {
         {title.slice(3)}
       </text>
       <circle cx="680" cy="300" r="64" fill={accent} />
-      <path d="M652 328 L708 272 M666 272 H708 V314" stroke="#111" strokeWidth="10" fill="none" />
     </svg>
   );
 }
 
-function ArrowMotif({ accent }: { accent: string }) {
+function BarsMotif({ accent }: { accent: string }) {
+  // Horizontal bars growing in a geometric progression — momentum, no arrows.
   return (
     <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full">
-      <path d="M120 680 L560 240" stroke={accent} strokeWidth="96" strokeLinecap="square" />
-      <path d="M300 180 H620 V500" stroke={accent} strokeWidth="96" fill="none" strokeLinecap="square" />
-      {Array.from({ length: 6 }, (_, i) => (
-        <path key={i} d={`M${40 + i * 40} 760 L${40 + i * 40 + 60} 700`} stroke={accent} strokeOpacity={0.15 + i * 0.12} strokeWidth="10" />
-      ))}
+      {Array.from({ length: 7 }, (_, i) => {
+        const w = 90 * Math.pow(1.38, i);
+        const h = 14 + i * 9;
+        const y = 120 + i * 82 + i * i * 2;
+        return <rect key={i} x={800 - w} y={y} width={w} height={h} fill={accent} fillOpacity={0.25 + i * 0.125} />;
+      })}
+      <circle cx="210" cy="190" r="70" fill={accent} />
     </svg>
   );
 }

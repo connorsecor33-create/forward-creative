@@ -12,7 +12,7 @@ export function Marquee({
   items,
   className = "",
   itemClassName = "",
-  separator = "↗",
+  separator = "●",
   duration = 38,
   label,
 }: MarqueeProps) {
@@ -21,7 +21,7 @@ export function Marquee({
       {items.map((item, i) => (
         <li key={i} className={`flex items-center ${itemClassName}`}>
           <span>{item}</span>
-          <span aria-hidden="true" className="mx-[0.6em] text-lime">
+          <span aria-hidden="true" className="mx-[0.7em] text-[0.45em] text-lime">
             {separator}
           </span>
         </li>

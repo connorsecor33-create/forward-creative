@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
 
 type Variant = "lime" | "ink" | "paper" | "outline" | "outline-light";
 
@@ -38,7 +37,6 @@ type BaseProps = {
   size?: "sm" | "md" | "lg";
   magnetic?: boolean;
   className?: string;
-  icon?: boolean;
 };
 
 type LinkProps = BaseProps & { href: string; onClick?: () => void; type?: never; disabled?: never };
@@ -56,12 +54,11 @@ const sizes = {
 };
 
 /**
- * Animated CTA: a colour wipe on hover, arrow that shoots out and back,
+ * Animated CTA: a colour wipe on hover
  * and an optional magnetic pull on fine-pointer devices.
  */
 export function Button(props: LinkProps | ButtonProps) {
-  const { children, variant = "lime", size = "md", magnetic = true, className = "", icon = true } =
-    props;
+  const { children, variant = "lime", size = "md", magnetic = true, className = "" } = props;
   const ref = useRef<HTMLSpanElement>(null);
   const reduce = useReducedMotion();
   const x = useSpring(useMotionValue(0), { stiffness: 220, damping: 18, mass: 0.4 });
@@ -88,18 +85,6 @@ export function Button(props: LinkProps | ButtonProps) {
         className={`relative z-10 flex items-center ${sizes[size].split(" ").find((c) => c.startsWith("gap"))} transition-colors duration-300 ${hoverText[variant]}`}
       >
         <span>{children}</span>
-        {icon && (
-          <span className="relative block size-[1.1em] overflow-hidden" aria-hidden="true">
-            <ArrowUpRight
-              className="absolute inset-0 size-full transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:-translate-y-full group-hover:translate-x-full"
-              strokeWidth={2}
-            />
-            <ArrowUpRight
-              className="absolute inset-0 size-full -translate-x-full translate-y-full transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:translate-x-0 group-hover:translate-y-0"
-              strokeWidth={2}
-            />
-          </span>
-        )}
       </span>
     </>
   );

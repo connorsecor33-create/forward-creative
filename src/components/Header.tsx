@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
 import { navLinks, site } from "@/lib/content";
 import { Wordmark } from "./Wordmark";
 import { Button } from "./Button";
@@ -208,11 +207,11 @@ export function Header() {
                     {site.email}
                   </a>
                   <div className="flex gap-4">
-                    <a href={site.social.instagram} className="eyebrow inline-flex items-center gap-1 text-paper/80" target="_blank" rel="noreferrer">
-                      IG <ArrowUpRight className="size-3" aria-hidden="true" />
+                    <a href={site.social.instagram} className="eyebrow text-paper/80" target="_blank" rel="noreferrer">
+                      Instagram
                     </a>
-                    <a href={site.social.linkedin} className="eyebrow inline-flex items-center gap-1 text-paper/80" target="_blank" rel="noreferrer">
-                      LI <ArrowUpRight className="size-3" aria-hidden="true" />
+                    <a href={site.social.linkedin} className="eyebrow text-paper/80" target="_blank" rel="noreferrer">
+                      LinkedIn
                     </a>
                   </div>
                 </div>

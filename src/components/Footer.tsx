@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { navLinks, site } from "@/lib/content";
 import { Wordmark } from "./Wordmark";
 import { BackToTop } from "./BackToTop";
@@ -20,7 +19,6 @@ export function Footer() {
                 <li key={l.href}>
                   <Link href={l.href} className="group inline-flex items-center gap-2 text-lg hover:text-lime">
                     {l.label}
-                    <ArrowUpRight className="size-4 opacity-0 transition-all duration-300 group-hover:opacity-100" aria-hidden="true" />
                   </Link>
                 </li>
               ))}
@@ -32,13 +30,13 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <a href={site.social.instagram} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-lg hover:text-lime">
-                  Instagram <ArrowUpRight className="size-4" aria-hidden="true" />
+                  Instagram
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
               </li>
               <li>
                 <a href={site.social.linkedin} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 text-lg hover:text-lime">
-                  LinkedIn <ArrowUpRight className="size-4" aria-hidden="true" />
+                  LinkedIn
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
               </li>

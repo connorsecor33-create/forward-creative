@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
 import { type Project, statusLabel } from "@/lib/content";
 import { ProjectArt } from "./ProjectArt";
 import { EASE_IN_OUT, inViewOnce } from "@/lib/motion";
@@ -18,7 +17,7 @@ type ProjectCardProps = {
 
 /**
  * Image-led project card: clip-path reveal on scroll, inner parallax drift,
- * slow zoom on hover, and a lime arrow disc that rotates into place.
+ * and a slow zoom on hover.
  */
 export function ProjectCard({ project, aspect = "aspect-[4/5]", className = "", priority }: ProjectCardProps) {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -72,13 +71,6 @@ export function ProjectCard({ project, aspect = "aspect-[4/5]", className = "", 
             {statusLabel[project.status]}
           </span>
 
-          {/* View disc */}
-          <span
-            aria-hidden="true"
-            className="absolute bottom-3 right-3 grid size-14 place-items-center rounded-full bg-lime text-ink transition-all duration-700 ease-[var(--ease-out-expo)] md:bottom-5 md:right-5 md:size-20 md:scale-75 md:opacity-0 md:group-hover:scale-100 md:group-hover:opacity-100 md:group-focus-visible:scale-100 md:group-focus-visible:opacity-100"
-          >
-            <ArrowUpRight className="size-6 transition-transform duration-700 group-hover:rotate-45 md:size-7" />
-          </span>
         </motion.div>
 
         {/* Meta */}
@@ -90,9 +82,8 @@ export function ProjectCard({ project, aspect = "aspect-[4/5]", className = "", 
           </h3>
           <span className="eyebrow self-center text-mute-dark">{project.year}</span>
           <p className="eyebrow text-mute-dark">{project.industry}</p>
-          <span className="eyebrow inline-flex items-center gap-1 justify-self-end">
+          <span className="eyebrow justify-self-end border-b border-transparent transition-colors duration-300 group-hover:border-ink">
             View project
-            <ArrowUpRight className="size-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
           </span>
           <p className="col-span-2 text-sm text-ink/70">{project.services.join(" · ")}</p>
         </div>

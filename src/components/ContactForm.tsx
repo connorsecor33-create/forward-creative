@@ -232,7 +232,7 @@ export function ContactForm() {
         <p className="max-w-xs text-sm text-paper/60">
           We reply to every serious inquiry. No newsletters, no spam.
         </p>
-        <Button type="submit" variant="lime" size="lg" disabled={status === "submitting"} icon={status !== "submitting"}>
+        <Button type="submit" variant="lime" size="lg" disabled={status === "submitting"}>
           {status === "submitting" ? (
             <span className="inline-flex items-center gap-2">
               <LoaderCircle className="size-4 animate-spin" aria-hidden="true" /> Sending…
