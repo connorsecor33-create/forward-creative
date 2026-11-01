@@ -38,7 +38,7 @@ export default async function ProjectPage({ params }: Props) {
     concept:
       "This is a self-initiated concept, not commissioned client work. It exists to show how we approach a brief — the strategy, the system, and the craft.",
     founder:
-      "THUMOS is an existing brand associated with Forward Theory's founder. It's included for context about the people behind the studio — not as agency client work or deliverables.",
+      "THUMOS is Connor Secor's own brand. It's included for context about the founder behind the studio — not as Forward Theory client work or deliverables.",
     client: "",
   };
 

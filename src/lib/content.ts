@@ -21,6 +21,7 @@ export const navLinks = [
   { label: "Work", href: "/#work" },
   { label: "Services", href: "/#services" },
   { label: "Studio", href: "/#studio" },
+  { label: "Founder", href: "/founder" },
   { label: "Contact", href: "/#contact" },
 ] as const;
 
@@ -119,13 +120,13 @@ export const projects: Project[] = [
   {
     slug: "thumos",
     title: "THUMOS",
-    industry: "Consumer brand", // TODO: confirm category
+    industry: "Wellness / Supplements",
     services: ["Founder's own brand"],
     year: "Existing brand",
     status: "founder",
     art: { bg: "#111111", fg: "#F2F0EB", accent: "#D9FF43", motif: "type" },
     summary:
-      "THUMOS is an existing brand associated with Forward Theory's founder. It is shown here for context only — it is not presented as Forward Theory client work.",
+      "THUMOS is a daily brain + gut support brand founded by Connor Secor, Forward Theory's founder. Building and launching it is where his work in creative design, marketing, and brand building began. It's shown here as his own venture — not as Forward Theory client work.",
     size: "lg",
   },
   {
@@ -215,3 +216,61 @@ export const budgetOptions = [
   "$100k+",
   "Not sure yet",
 ] as const;
+
+/**
+ * Founder page content. Every fact here comes from Connor — keep it that way.
+ */
+export const founder = {
+  name: "Connor Secor",
+  role: "Founder, Forward Theory",
+  photo: {
+    src: "/founder/connor-secor.jpg",
+    alt: "Black-and-white portrait of Connor Secor, arms crossed, smiling in front of a textured white wall",
+    width: 1400,
+    height: 1867,
+  },
+  intro:
+    "A former Naval Special Warfare Boat Operator who turned a hard-won comeback into a brand — and a brand into a creative studio.",
+  facts: [
+    { value: "7 years", label: "Naval Special Warfare Boat Operator" },
+    { value: "Multiple", label: "Deployments overseas" },
+    { value: "THUMOS", label: "Brand founded & launched" },
+  ],
+  chapters: [
+    {
+      number: "01",
+      title: "Service",
+      body: "Connor spent seven years as a Naval Special Warfare Boat Operator, with multiple deployments overseas.",
+    },
+    {
+      number: "02",
+      title: "The comeback",
+      body: "A career in special operations came with traumatic brain injuries. Connor answered by going to market with THUMOS, a daily brain + gut support.",
+    },
+    {
+      number: "03",
+      title: "The creative shift",
+      body: "Launching a brand gave him the chance to unleash his full creative potential. Since then he has relentlessly learned creative design, marketing, and brand building.",
+    },
+    {
+      number: "04",
+      title: "Forward Theory",
+      body: "Now he brings that forward-looking vision to other founders and businesses — helping bring any project to life.",
+    },
+  ],
+  // TODO(Connor): approve these — they're drawn from your story, not invented credentials.
+  brings: [
+    {
+      title: "Mission focus",
+      body: "Seven years in Naval Special Warfare means clear objectives, disciplined execution, and following through.",
+    },
+    {
+      title: "A founder's perspective",
+      body: "He has taken his own brand to market, so he knows what's at stake when it's your name on the product.",
+    },
+    {
+      title: "Relentless learning",
+      body: "Every skill in his creative toolkit was earned by doing the work. He keeps learning so your project benefits.",
+    },
+  ],
+} as const;

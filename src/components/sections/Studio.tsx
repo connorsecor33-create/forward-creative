@@ -1,5 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Reveal, RevealLines } from "../Reveal";
 import { Parallax } from "../Parallax";
+import { founder } from "@/lib/content";
 
 const pillars = ["Strategy", "Design", "Technology", "Storytelling"];
 
@@ -70,6 +73,36 @@ export function Studio() {
           </Parallax>
         </div>
       </div>
+
+      {/* Founder teaser */}
+      <Reveal className="mt-24 md:mt-36">
+        <Link
+          href="/founder"
+          className="group grid items-center gap-6 border-y border-ink/15 py-6 sm:grid-cols-[auto_1fr_auto] sm:gap-8 md:py-8"
+        >
+          <span className="relative block size-24 overflow-hidden rounded-full bg-ink md:size-28">
+            <Image
+              src={founder.photo.src}
+              alt=""
+              fill
+              sizes="112px"
+              className="object-cover object-[50%_20%] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-110"
+            />
+          </span>
+          <span>
+            <span className="eyebrow block text-mute-dark">Founded by</span>
+            <span className="mt-2 block font-display text-[clamp(1.75rem,3.4vw,3rem)] font-black uppercase leading-none tracking-[-0.045em]">
+              {founder.name}
+            </span>
+            <span className="mt-3 block max-w-xl text-ink/75">
+              Former Naval Special Warfare Boat Operator and founder of THUMOS.
+            </span>
+          </span>
+          <span className="eyebrow w-fit border-b border-ink pb-1 transition-colors group-hover:border-transparent group-hover:bg-lime">
+            Meet the founder
+          </span>
+        </Link>
+      </Reveal>
     </section>
   );
 }

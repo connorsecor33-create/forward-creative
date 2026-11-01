@@ -99,7 +99,7 @@ export function Header() {
               />
             </Link>
 
-            <div className="hidden items-center gap-1 md:flex">
+            <div className="hidden items-center gap-1 lg:flex">
               <ul className="mr-3 flex items-center">
                 {navLinks.map((l) => (
                   <li key={l.href}>
@@ -132,7 +132,7 @@ export function Header() {
             <button
               ref={menuButton}
               type="button"
-              className="relative z-10 flex h-11 items-center gap-3 rounded-full px-3 md:hidden"
+              className="relative z-10 flex h-11 items-center gap-3 rounded-full px-3 lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               onClick={() => setOpen((o) => !o)}
@@ -164,7 +164,7 @@ export function Header() {
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
-            className="on-dark fixed inset-0 z-40 flex flex-col bg-ink text-paper md:hidden"
+            className="on-dark fixed inset-0 z-40 flex flex-col bg-ink text-paper lg:hidden"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
