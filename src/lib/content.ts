@@ -233,7 +233,7 @@ export const founder = {
     "A former Naval Special Warfare Boat Operator who turned a hard-won comeback into a brand — and a brand into a creative studio.",
   facts: [
     { value: "7 years", label: "Naval Special Warfare Boat Operator" },
-    { value: "Multiple", label: "Deployments overseas" },
+    { value: "Martial Artist", label: "& High Speed Boat Throttleman" },
     { value: "THUMOS", label: "Brand founded & launched" },
   ],
   chapters: [
