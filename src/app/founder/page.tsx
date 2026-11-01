@@ -106,7 +106,7 @@ export default function FounderPage() {
         label="Connor's path"
         className="on-dark bg-ink py-4 text-paper md:py-5"
         itemClassName="font-display text-[clamp(1.25rem,2.6vw,2.25rem)] font-black uppercase tracking-[-0.03em]"
-        items={["Naval Special Warfare", "Multiple deployments", "THUMOS", "Creative design", "Marketing", "Brand building", "Forward Theory"]}
+        items={["Naval Special Warfare", "High Speed Boat Throttleman", "Martial Artist", "THUMOS", "Creative design", "Marketing", "Brand building", "Forward Theory"]}
         duration={42}
       />
 
