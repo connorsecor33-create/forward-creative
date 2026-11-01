@@ -10,7 +10,7 @@ export const site = {
   description:
     "Forward Theory is an independent creative studio building brands, websites, and digital experiences that turn ambitious ideas into meaningful growth.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://forwardtheory.co", // TODO: real domain
-  email: "hello@forwardtheory.co", // TODO: real inbox
+  email: "connor@forwardtheory.co",
   social: {
     instagram: "https://www.instagram.com/", // TODO: real profile
     linkedin: "https://www.linkedin.com/", // TODO: real profile
